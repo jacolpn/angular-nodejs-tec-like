@@ -1,40 +1,26 @@
-<div class="wrapper">
-    <div class="box-links">
-        <a [routerLink]="['/']">Início</a>
-        <a [routerLink]="['/homenagens']">Homenagear</a>
-        <a [routerLink]="['/list-homenagens']">Minhas Homenagens</a>
-    </div>
+<po-dynamic-form
+    #dynamicForm
+    p-auto-focus="homenageado"
+    [p-value]="person"
+    [p-fields]="fields"
+>
+</po-dynamic-form>
 
-    <div class="container po-xl-12 po-lg-12 po-md-12 po-sm-12">
-        <!-- {{ dynamicForm.value | json }} {{ dynamicForm.form.valid }} {{ dynamicForm.form.invalid }} -->
-        <po-dynamic-form
-            #dynamicForm
-            p-auto-focus="homenageado"
-            [p-value]="person"
-            [p-fields]="fields"
-        >
-        </po-dynamic-form>
-
-        <div class="po-row">
-            <po-button
-                dynamicForm
-                p-label="Enviar"
-                class="po-md-3"
-                p-type="primary"
-                (p-click)="
-                    sendHomenagem(dynamicForm.form.value);
-                    dynamicForm.form.reset()
-                "
-                [p-disabled]="dynamicForm.form.invalid == true"
-            >
-            </po-button>
-            <po-button
-                p-label="Limpar"
-                p-type="default"
-                class="po-md-3"
-                (p-click)="dynamicForm.form.reset()"
-            >
-            </po-button>
-        </div>
-    </div>
+<div class="po-row">
+    <po-button
+        dynamicForm
+        p-label="Enviar"
+        class="po-md-3"
+        p-type="primary"
+        (p-click)="sendHomenagem(dynamicForm.form.value); dynamicForm.form.reset()"
+        [p-disabled]="dynamicForm.form.invalid == true"
+    >
+    </po-button>
+    <po-button
+        p-label="Limpar"
+        p-type="default"
+        class="po-md-3"
+        (p-click)="dynamicForm.form.reset()"
+    >
+    </po-button>
 </div>

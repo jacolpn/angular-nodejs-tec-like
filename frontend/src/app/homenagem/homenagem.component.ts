@@ -32,7 +32,7 @@ export class HomenagemComponent implements OnInit {
             options: [
                 { label: 'Jackson', value: 'afda2700-7812-4d80-a199-162c72003b5e' },
                 { label: 'Angélica', value: 'angelica' },
-                { label: 'Neves', value: 'neves' },
+                { label: 'Gustavo', value: 'neves' },
                 { label: 'Jacques', value: 'jacques' }
             ]
         },
@@ -45,7 +45,8 @@ export class HomenagemComponent implements OnInit {
                 { label: 'Liderança', value: '160b5629-ed11-4d86-9666-2acdf085feaa' },
                 { label: 'Inovação', value: 'inovacao' },
                 { label: 'Procrastinação', value: 'procrastinacao' },
-                { label: 'Topzera', value: 'topzera' }
+                { label: 'Topzera', value: 'topzera' },
+                { label: 'Mais que brother', value: 'brother' }
             ]
         },
         {
