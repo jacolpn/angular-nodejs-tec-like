@@ -18,10 +18,10 @@ export class HomenagemComponent implements OnInit {
             gridColumns: 6,
             required: true,
             options: [
-                { label: 'Jackson', value: 'de30829b-c86f-47ea-ae5f-a77fcc6351f0' },
-                { label: 'Angélica', value: 'angelica' },
-                { label: 'Neves', value: 'neves' },
-                { label: 'Jacques', value: 'jacques' }
+                { label: 'JacoNeves', value: 'de30829b-c86f-47ea-ae5f-a77fcc6351f0' },
+                { label: 'JacoBR', value: 'afda2700-7812-4d80-a199-162c72003b5e' },
+                { label: 'Administrador', value: '1864e7cf-8bb6-40de-befc-8dd88c2e923e' },
+                { label: 'Jackson TOTVS', value: '66d5b929-22d2-4158-9abc-5d5c1f0d90ab' }
             ]
         },
         {
@@ -30,10 +30,10 @@ export class HomenagemComponent implements OnInit {
             gridColumns: 6,
             required: true,
             options: [
-                { label: 'Jackson', value: 'afda2700-7812-4d80-a199-162c72003b5e' },
-                { label: 'Angélica', value: 'angelica' },
-                { label: 'Gustavo', value: 'neves' },
-                { label: 'Jacques', value: 'jacques' }
+                { label: 'JacoBR', value: 'afda2700-7812-4d80-a199-162c72003b5e' },
+                { label: 'JacoNeves', value: 'de30829b-c86f-47ea-ae5f-a77fcc6351f0' },
+                { label: 'Administrador', value: '1864e7cf-8bb6-40de-befc-8dd88c2e923e' },
+                { label: 'Jackson TOTVS', value: '66d5b929-22d2-4158-9abc-5d5c1f0d90ab' }
             ]
         },
         {
@@ -42,11 +42,10 @@ export class HomenagemComponent implements OnInit {
             gridColumns: 6,
             required: true,
             options: [
-                { label: 'Liderança', value: '160b5629-ed11-4d86-9666-2acdf085feaa' },
-                { label: 'Inovação', value: 'inovacao' },
-                { label: 'Procrastinação', value: 'procrastinacao' },
-                { label: 'Topzera', value: 'topzera' },
-                { label: 'Mais que brother', value: 'brother' }
+                { label: 'Liderança', value: '3960d023-1e04-4af3-8a1d-22c1222a317a' },
+                { label: 'Inovação', value: '78f04f8f-d98e-498b-8f05-f2a2a93efb74' },
+                { label: 'Superação', value: '99af7013-9ac3-4244-9fec-03921194d4e7' },
+                { label: 'Inspiração', value: '160b5629-ed11-4d86-9666-2acdf085feaa' }
             ]
         },
         {

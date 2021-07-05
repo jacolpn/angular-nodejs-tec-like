@@ -31,9 +31,8 @@
 .box-links > a {
     padding: 5px 0;
     text-decoration: none;
-    font-family: 'Lobster', cursive;
-    font-size: larger;
-    /* font-size: 25px; */
+    font-family: 'Lobster Two', cursive;
+    font-size: x-large;
     color: blanchedalmond;
 }
 
@@ -69,4 +68,7 @@
         margin: 0;
     }
     
+    .box-links > a {
+        font-size: large;
+    }
 }

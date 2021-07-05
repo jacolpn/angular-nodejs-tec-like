@@ -8,6 +8,9 @@ class ListUserReceiveComplimentService {
             where: {
                 user_receiver: user_id
             },
+            order: {
+                created_at: "DESC"
+            },
             relations: [
                 "userSender",
                 "userReceiver",

@@ -11,7 +11,7 @@
 </div>
 
 <div class="list-item">
-    <div *ngFor="let item of employee">
+    <div *ngFor="let item of employee" class="item">
         <po-dynamic-view [p-fields]="fields" [p-value]="item">
         </po-dynamic-view>
     </div>
