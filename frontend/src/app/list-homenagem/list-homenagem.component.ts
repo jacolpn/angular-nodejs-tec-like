@@ -1,9 +1,8 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { PoDynamicViewField } from '@po-ui/ng-components';
 
-import { environment } from 'src/environments/environment';
 import { ListHomenagem } from './list-homenagem.model';
+import { ListHomenagemService } from './list-homenagem.service';
 
 @Component({
     selector: 'app-list-homenagem',
@@ -19,30 +18,28 @@ export class ListHomenagemComponent implements OnInit {
         { property: 'message', label: 'Mensagem', gridColumns: 12, order: 4 }
     ];
 
-    constructor(private http: HttpClient) { }
+    constructor(private listHomenagemService: ListHomenagemService) { }
 
     ngOnInit(): void {
         if(this.employee.length == 0) {
-            this.getUser();
+            this.getReceiver();
         }
     }
 
-    getUser() {
-        return this.http
-        .get<any[]>(`${environment.api}/users/compliments/receive/afda2700-7812-4d80-a199-162c72003b5e`)
-        .subscribe({
-            next: restaurant => {
-                this.employee = restaurant.map((item: any) => new ListHomenagem(
-                    item.userSender.name,
-                    item.tag.name,
-                    item.message,
-                    item.created_at
-                ));
+    getReceiver() {
+        this.listHomenagemService.getReceiverById('afda2700-7812-4d80-a199-162c72003b5e')
+            .subscribe({
+                next: restaurant => {
+                    this.employee = restaurant.map((item: any) => new ListHomenagem(
+                        item.userSender.name,
+                        item.tag.name,
+                        item.message,
+                        item.created_at
+                    ));
 
-                console.log(restaurant)
-                console.log(this.employee)
-            },
-            error: error => console.log(error)
-        });
+                    // console.log(this.employee)
+                },
+                error: error => console.log(error)
+            });
     }
 }

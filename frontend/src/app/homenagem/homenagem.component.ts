@@ -65,7 +65,7 @@ export class HomenagemComponent implements OnInit {
 
     sendHomenagem(homenage: Homenagem) {
         this.homenagemService
-            .checkCompliment(homenage)
+            .postCompliment(homenage)
             .subscribe({
                     next: (value) => {
                         console.log(value);

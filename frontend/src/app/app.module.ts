@@ -13,6 +13,7 @@ import { ListHomenagemComponent } from './list-homenagem/list-homenagem.componen
 import { HomeComponent } from './home/home.component';
 
 import { HomenagemService } from './homenagem/homenagem.service';
+import { ListHomenagemService } from './list-homenagem/list-homenagem.service';
 
 @NgModule({
     schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
@@ -32,7 +33,7 @@ import { HomenagemService } from './homenagem/homenagem.service';
         PoModule,
         RouterModule.forRoot([])
     ],
-    providers: [HomenagemService],
+    providers: [HomenagemService, ListHomenagemService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

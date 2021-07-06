@@ -9,7 +9,7 @@ import { Homenagem } from "./homenagem.model";
 export class HomenagemService {
     constructor(private http: HttpClient) { }
 
-    checkCompliment(homenage: Homenagem): Observable<string> {
+    postCompliment(homenage: Homenagem): Observable<string> {
         return this.http.post<any>(`${environment.api}/compliments`, homenage);
     }
 }
