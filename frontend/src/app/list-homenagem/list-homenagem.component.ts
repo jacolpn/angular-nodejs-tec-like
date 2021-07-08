@@ -29,8 +29,8 @@ export class ListHomenagemComponent implements OnInit {
     getReceiver() {
         this.listHomenagemService.getReceiverById('afda2700-7812-4d80-a199-162c72003b5e')
             .subscribe({
-                next: restaurant => {
-                    this.employee = restaurant.map((item: any) => new ListHomenagem(
+                next: value => {
+                    this.employee = value.map((item: any) => new ListHomenagem(
                         item.userSender.name,
                         item.tag.name,
                         item.message,

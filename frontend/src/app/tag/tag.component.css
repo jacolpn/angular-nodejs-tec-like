@@ -1,0 +1,28 @@
+.margin-button {
+    padding-top: 31px;
+}
+
+.wrapper-item {
+    display: grid;
+    text-align: center;
+}
+
+.button-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5px;
+}
+
+.list-item {
+    height: 65%;
+    width: 100%;
+    display: grid;
+    text-align: justify;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 0;
+    overflow: auto;
+    margin-top: 20px;
+}

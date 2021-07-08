@@ -1,0 +1,37 @@
+<form [formGroup]="reactiveForm">
+    <div class="po-row">
+        <po-input
+            class="po-md-8"
+            formControlName="name"
+            p-clean p-icon="po-icon-user"
+            p-label="Tag"
+        >
+        </po-input>
+        <po-button
+            class="po-md-3 margin-button"
+            p-type="primary"
+            p-label="Cadastrar"
+            [p-disabled]="!reactiveForm.valid"
+            (p-click)="saveForm(); reactiveForm.reset()"
+        >
+        </po-button>
+    </div>
+</form>
+<div class="wrapper-item">
+    <div class="button-item">
+        <po-button
+            class="po-md-3 margin-button"
+            p-type="primary"
+            p-label="Listar TAGs"
+            (p-click)="loadTag()"
+        >
+        </po-button>
+    </div>
+
+    <div class="list-item">
+        <div *ngFor="let item of employee">
+            <po-dynamic-view [p-fields]="fields" [p-value]="item">
+            </po-dynamic-view>
+        </div>
+    </div>
+</div>

@@ -14,7 +14,7 @@ export class HomenagemComponent implements OnInit {
     fields: Array<PoDynamicFormField> = [
         {
             property: 'user_sender',
-            label: "Autor:",
+            label: "Autor",
             gridColumns: 6,
             required: true,
             options: [
@@ -26,7 +26,7 @@ export class HomenagemComponent implements OnInit {
         },
         {
             property: 'user_receiver',
-            label: "Homenageado:",
+            label: "Homenageado",
             gridColumns: 6,
             required: true,
             options: [
@@ -38,7 +38,7 @@ export class HomenagemComponent implements OnInit {
         },
         {
             property: 'tag_id',
-            label: 'Tag:',
+            label: 'Tag',
             gridColumns: 6,
             required: true,
             options: [
@@ -50,7 +50,7 @@ export class HomenagemComponent implements OnInit {
         },
         {
             property: 'message',
-            label: 'Mensagem:',
+            label: 'Mensagem',
             gridColumns: 12,
             gridSmColumns: 12,
             required: true,
@@ -67,10 +67,7 @@ export class HomenagemComponent implements OnInit {
         this.homenagemService
             .postCompliment(homenage)
             .subscribe({
-                    next: (value) => {
-                        console.log(value);
-                        this.poNotification.success('Data saved successfully!');
-                    },
+                    next: (value) => this.poNotification.success('Data saved successfully!'),
                     error: err => console.log(err)
             });
     }
