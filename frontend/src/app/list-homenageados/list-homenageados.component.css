@@ -1,0 +1,21 @@
+.container-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.list-item {
+    height: 83%;
+    width: 100%;
+    display: grid;
+    text-align: justify;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 1em;
+    overflow: auto;
+}
+
+.item {
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.1);
+}

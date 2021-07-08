@@ -1,0 +1,18 @@
+<div class="container-button">
+    <po-button
+        dynamicForm
+        p-label="Atualizar"
+        class="po-md-3"
+        p-icon="po-icon po-icon-change"
+        p-type="primary"
+        (p-click)="getReceiver()"
+    >
+    </po-button>
+</div>
+
+<div class="list-item">
+    <div *ngFor="let item of employee" class="item">
+        <po-dynamic-view [p-fields]="fields" [p-value]="item">
+        </po-dynamic-view>
+    </div>
+</div>

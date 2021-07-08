@@ -8,12 +8,14 @@ import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 import { HomenagemComponent } from './homenagem/homenagem.component';
 import { ListHomenagemComponent } from './list-homenagem/list-homenagem.component';
-import { HomeComponent } from './home/home.component';
+import { ListHomenageadosComponent } from './list-homenageados/list-homenageados.component';
 
 import { HomenagemService } from './homenagem/homenagem.service';
 import { ListHomenagemService } from './list-homenagem/list-homenagem.service';
+import { ListHomenageadosService } from './list-homenageados/list-homenageados.service';
 
 @NgModule({
     schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
@@ -21,7 +23,8 @@ import { ListHomenagemService } from './list-homenagem/list-homenagem.service';
         AppComponent,
         HomeComponent,
         HomenagemComponent,
-        ListHomenagemComponent
+        ListHomenagemComponent,
+        ListHomenageadosComponent
     ],
     imports: [
         BrowserModule,
@@ -33,7 +36,11 @@ import { ListHomenagemService } from './list-homenagem/list-homenagem.service';
         PoModule,
         RouterModule.forRoot([])
     ],
-    providers: [HomenagemService, ListHomenagemService],
+    providers: [
+        HomenagemService,
+        ListHomenagemService,
+        ListHomenageadosService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
